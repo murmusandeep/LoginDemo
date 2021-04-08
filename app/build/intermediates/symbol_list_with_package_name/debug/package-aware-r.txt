@@ -1714,6 +1714,7 @@ id btn_SavePassword
 id btn_UpdatePassword
 id btn_login
 id btn_logout
+id btn_profile
 id btn_resetPassword
 id buttonPanel
 id cancel_button

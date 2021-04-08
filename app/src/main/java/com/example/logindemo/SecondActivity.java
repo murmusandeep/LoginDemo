@@ -18,6 +18,8 @@ public class SecondActivity extends AppCompatActivity {
 
     private Button mLogout;
 
+    private Button mProfile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +28,19 @@ public class SecondActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         mLogout = (Button)findViewById(R.id.btn_logout);
+        mProfile = findViewById(R.id.btn_profile);
 
         mLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logout();
+            }
+        });
+
+        mProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SecondActivity.this, ProfileActivity.class));
             }
         });
 
