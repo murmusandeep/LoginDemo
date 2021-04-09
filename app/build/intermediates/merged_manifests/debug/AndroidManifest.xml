@@ -30,10 +30,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.logindemo.Retrofit.DetailActivity" />
-        <activity android:name="com.example.logindemo.UpdatePassword" />
-        <activity android:name="com.example.logindemo.UpdateActivity" />
         <activity android:name="com.example.logindemo.ProfileActivity" />
-        <activity android:name="com.example.logindemo.PasswordActivity" />
         <activity android:name="com.example.logindemo.RegistrationActivity" />
         <activity android:name="com.example.logindemo.SecondActivity" />
         <activity android:name="com.example.logindemo.MainActivity" >

@@ -17,10 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Retrofit.DetailActivity"></activity>
-        <activity android:name=".UpdatePassword" />
-        <activity android:name=".UpdateActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".PasswordActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">

@@ -41,13 +41,12 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        setTitle("Profile");
+
         mProfileAge = (TextView)findViewById(R.id.profile_Age);
         mProfileEmail = (TextView)findViewById(R.id.profile_Email);
         mProfileName = (TextView)findViewById(R.id.profile_UserName);
         mProfilePic = (ImageView)findViewById(R.id.profile_Image);
-
-        Button mUpdateProfile = (Button) findViewById(R.id.btn_Edit);
-        Button mUpdatePassword = (Button) findViewById(R.id.btn_UpdatePassword);
 
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -79,19 +78,6 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-        mUpdateProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ProfileActivity.this, UpdateActivity.class));
-            }
-        });
-
-        mUpdatePassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ProfileActivity.this, UpdatePassword.class));
-            }
-        });
     }
 
     @Override

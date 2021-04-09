@@ -52,6 +52,8 @@ public class SecondActivity extends AppCompatActivity implements UserDataAdapter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        setTitle("Top 20 Richest Personal");
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         mRecyclerView = findViewById(R.id.recycler_view);

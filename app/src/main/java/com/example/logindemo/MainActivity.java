@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         mLoginButton = (Button) findViewById(R.id.btn_login);
         mInfo = (TextView)findViewById(R.id.tvInfo);
         TextView mUserRegistration = (TextView) findViewById(R.id.registerText);
-        TextView mForgotPassword = (TextView) findViewById(R.id.forgotPassword);
 
         String noOfAttempt = "No. of Attempts remaining:" + String.valueOf(mCounter);
         mInfo.setText(noOfAttempt);
@@ -81,13 +80,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
-            }
-        });
-
-        mForgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, PasswordActivity.class));
             }
         });
     }

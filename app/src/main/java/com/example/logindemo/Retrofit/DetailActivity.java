@@ -25,6 +25,8 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        setTitle("Detail");
+
         Intent intent = getIntent();
 
         String Name = intent.getStringExtra(EXTRA_NAME);
