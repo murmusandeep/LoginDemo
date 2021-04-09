@@ -14,14 +14,14 @@
 
         <TextView
             android:id="@+id/name"
-            android:text="Name"
+            android:text="@string/name"
             android:textSize="30sp"
             android:textColor="@android:color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/age"
-            android:text="Age"
+            android:text="@string/age"
             android:textSize="30sp"
             android:textColor="@android:color/black"
             android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
 
         <TextView
             android:id="@+id/country"
-            android:text="Country"
+            android:text="@string/country"
             android:textSize="25sp"
             android:textColor="@android:color/black"
             android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
 
         <TextView
             android:id="@+id/gender"
-            android:text="Gender"
+            android:text="@string/gender"
             android:textSize="20sp"
             android:textColor="@android:color/black"
             android:layout_width="wrap_content"

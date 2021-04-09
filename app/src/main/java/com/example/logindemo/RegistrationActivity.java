@@ -42,10 +42,9 @@ public class RegistrationActivity extends AppCompatActivity {
     private ImageView mRegisterProfile;
 
     private FirebaseAuth firebaseAuth;
-    private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
 
-    private static int PICK_IMAGE = 123;
+    private static final int PICK_IMAGE = 123;
     Uri imagePath;
 
     String name;
@@ -77,7 +76,7 @@ public class RegistrationActivity extends AppCompatActivity {
         setupUIViews();
 
         firebaseAuth = FirebaseAuth.getInstance();
-        firebaseStorage = FirebaseStorage.getInstance();
+        FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
 
         storageReference = firebaseStorage.getReference();
 
@@ -86,7 +85,7 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setType("image/*"); // application/* audio/* video/*
-                intent.setAction(intent.ACTION_GET_CONTENT);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(intent, "Select Image"), PICK_IMAGE);
             }
         });
@@ -137,7 +136,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private Boolean validate() {
 
-        Boolean result = false;
+        boolean result = false;
 
         name = mRegisterUserName.getText().toString();
         email = mRegisterEmail.getText().toString();

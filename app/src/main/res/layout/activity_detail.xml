@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="18dp"
     tools:context=".Retrofit.DetailActivity">
 
     <TextView
         android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="@string/name"
         android:fontFamily="monospace"
         android:textColor="@android:color/black"
         android:textSize="30sp" />
@@ -21,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:text="Country"
+        android:text="@string/country"
         android:textSize="25sp"/>
 
     <TextView
@@ -29,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:text="Age"
+        android:text="@string/age"
         android:textSize="20sp"/>
 
     <TextView
@@ -37,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:text="Gender"
+        android:text="@string/gender"
         android:textSize="20sp"/>
 
     <TextView
@@ -45,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#6A6969"
-        android:text="Description"
+        android:text="@string/description"
         android:fontFamily="sans-serif-black"
         android:textSize="15sp"/>
 

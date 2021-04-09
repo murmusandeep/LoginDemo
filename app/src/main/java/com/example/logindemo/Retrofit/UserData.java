@@ -2,11 +2,11 @@ package com.example.logindemo.Retrofit;
 
 public class UserData {
 
-    private String mName;
-    private String mGender;
-    private String mCountry;
-    private String mAge;
-    private String mDescription;
+    private final String mName;
+    private final String mGender;
+    private final String mCountry;
+    private final String mAge;
+    private final String mDescription;
 
     public UserData(String name, String gender, String country, String age, String description) {
 

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">LoginDemo</string>
     <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="country">Country</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="description">Description</string>
+    <string name="no_of_attempts_remaining">No. of Attempts remaining:</string>
 </resources>

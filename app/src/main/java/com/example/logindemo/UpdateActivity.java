@@ -39,16 +39,13 @@ public class UpdateActivity extends AppCompatActivity {
     private EditText mUpdateProfileUserName;
     private EditText mUpdateProfileAge;
     private EditText mUpdateProfileEmail;
-    private Button mUpdateSave;
 
 
-    private FirebaseDatabase firebaseDatabase;
     private FirebaseAuth firebaseAuth;
 
-    private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
 
-    private static int PICK_IMAGE = 123;
+    private static final int PICK_IMAGE = 123;
     Uri imagePath;
 
     @Override
@@ -75,11 +72,11 @@ public class UpdateActivity extends AppCompatActivity {
         mUpdateProfileEmail = (EditText)findViewById(R.id.updateProfileEmail);
         mUpdateProfileImage = (ImageView)findViewById(R.id.updateProfileImage);
         mUpdateProfileUserName = (EditText)findViewById(R.id.updateProfileUserName);
-        mUpdateSave = (Button)findViewById(R.id.btn_Save);
+        Button mUpdateSave = (Button) findViewById(R.id.btn_Save);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        firebaseStorage = FirebaseStorage.getInstance();
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -143,7 +140,7 @@ public class UpdateActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setType("image/*"); // application/* audio/* video/*
-                intent.setAction(intent.ACTION_GET_CONTENT);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(intent, "Select Image"), PICK_IMAGE);
             }
         });
@@ -152,10 +149,8 @@ public class UpdateActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()) {
-            case android.R.id.home: {
-                onBackPressed();
-            }
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }

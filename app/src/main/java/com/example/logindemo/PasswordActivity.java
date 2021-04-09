@@ -18,8 +18,6 @@ public class PasswordActivity extends AppCompatActivity {
 
     private EditText mResetEmailPassword;
 
-    private Button mResetButton;
-
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -28,7 +26,7 @@ public class PasswordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_password);
 
         mResetEmailPassword = (EditText)findViewById(R.id.resetEmailPassword);
-        mResetButton = (Button)findViewById(R.id.btn_resetPassword);
+        Button mResetButton = (Button) findViewById(R.id.btn_resetPassword);
 
         firebaseAuth = FirebaseAuth.getInstance();
 

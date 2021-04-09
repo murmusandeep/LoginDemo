@@ -1,5 +1,6 @@
 package com.example.logindemo.Retrofit;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +16,8 @@ import java.util.ArrayList;
 
 public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.UserDataViewHolder> {
 
-    private Context mContext;
-    private ArrayList<UserData> mUserData;
+    private final Context mContext;
+    private final ArrayList<UserData> mUserData;
 
     private OnItemClickListener onItemClickListener;
 
@@ -42,6 +43,7 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.UserDa
         return new UserDataViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull UserDataViewHolder holder, int position) {
 
@@ -53,10 +55,10 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.UserDa
         String userAge = userdata.getAge();
         String userDescription = userdata.getDescription();
 
-        holder.mNameView.setText(userName);
-        holder.mGenderView.setText(userGender);
-        holder.mCountryView.setText(userCountry);
-        holder.mAgeView.setText(userAge);
+        holder.mNameView.setText("Name : " + userName);
+        holder.mGenderView.setText("Gender : " + userGender);
+        holder.mCountryView.setText("Country : " + userCountry);
+        holder.mAgeView.setText("Age : " + userAge);
     }
 
     @Override

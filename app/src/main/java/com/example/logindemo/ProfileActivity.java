@@ -35,12 +35,6 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView mProfileAge;
     private TextView mProfileEmail;
     private TextView mProfileName;
-    private Button mUpdateProfile;
-    private Button mUpdatePassword;
-
-    private FirebaseAuth firebaseAuth;
-    private FirebaseDatabase firebaseDatabase;
-    private FirebaseStorage firebaseStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,12 +46,12 @@ public class ProfileActivity extends AppCompatActivity {
         mProfileName = (TextView)findViewById(R.id.profile_UserName);
         mProfilePic = (ImageView)findViewById(R.id.profile_Image);
 
-        mUpdateProfile = (Button)findViewById(R.id.btn_Edit);
-        mUpdatePassword = (Button)findViewById(R.id.btn_UpdatePassword);
+        Button mUpdateProfile = (Button) findViewById(R.id.btn_Edit);
+        Button mUpdatePassword = (Button) findViewById(R.id.btn_UpdatePassword);
 
-        firebaseAuth = FirebaseAuth.getInstance();
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        firebaseStorage = FirebaseStorage.getInstance();
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -103,10 +97,8 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()) {
-            case android.R.id.home: {
-                onBackPressed();
-            }
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }

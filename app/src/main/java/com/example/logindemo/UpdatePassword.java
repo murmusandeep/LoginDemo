@@ -20,7 +20,6 @@ import java.util.Objects;
 
 public class UpdatePassword extends AppCompatActivity {
 
-    private Button mUpdate;
     private EditText mUpdatePassword;
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
@@ -31,7 +30,7 @@ public class UpdatePassword extends AppCompatActivity {
         setContentView(R.layout.activity_update_password);
 
         mUpdatePassword = (EditText)findViewById(R.id.updatePassword);
-        mUpdate = (Button)findViewById(R.id.btn_SavePassword);
+        Button mUpdate = (Button) findViewById(R.id.btn_SavePassword);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -68,10 +67,8 @@ public class UpdatePassword extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()) {
-            case android.R.id.home: {
-                onBackPressed();
-            }
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }

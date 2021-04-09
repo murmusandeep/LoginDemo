@@ -2363,6 +2363,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string age
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2390,7 +2391,9 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string country
 string default_web_client_id
+string description
 string email
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -2398,6 +2401,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string firebase_database_url
 string gcm_defaultSenderId
+string gender
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
@@ -2455,6 +2459,8 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string name
+string no_of_attempts_remaining
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
