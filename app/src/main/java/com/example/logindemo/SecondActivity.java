@@ -65,15 +65,6 @@ public class SecondActivity extends AppCompatActivity implements UserDataAdapter
         mRequestQueue = Volley.newRequestQueue(this);
         parseJSON();
 
-//        mLogout = (Button)findViewById(R.id.btn_logout);
-//
-//        mLogout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                logout();
-//            }
-//        });
-
     }
 
     private void parseJSON() {

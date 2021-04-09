@@ -97,8 +97,6 @@ public class MainActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     progressDialog.dismiss();
                     checkEmailVerification();
-                    // Toast.makeText(MainActivity.this, "Login Successful" , Toast.LENGTH_SHORT).show();
-                    // startActivity(new Intent(MainActivity.this, SecondActivity.class));
                 }
                 else {
 
@@ -121,15 +119,6 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(MainActivity.this, SecondActivity.class));
         finish();
-
-        /* if(emailFlag) {
-            finish();
-            startActivity(new Intent(MainActivity.this, SecondActivity.class));
-        }
-        else {
-            Toast.makeText(this, "Verify your email", Toast.LENGTH_SHORT).show();
-            firebaseAuth.signOut();
-        } */
     }
 
     private boolean isValidEmail(String email) {

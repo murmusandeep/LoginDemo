@@ -105,10 +105,6 @@ public class RegistrationActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if(task.isSuccessful()) {
-                                //Toast.makeText(RegistrationActivity.this, "Registration Successful , Go Mail to verify", Toast.LENGTH_SHORT).show();
-                                //startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
-
-                               /* sendEmailVerification(); */
 
                                 sendUserData();
                                 Toast.makeText(RegistrationActivity.this, "Successfully Registered, Upload complete",Toast.LENGTH_SHORT).show();
@@ -163,27 +159,6 @@ public class RegistrationActivity extends AppCompatActivity {
 
         mRegisterAge = (EditText) findViewById(R.id.register_Age);
         mRegisterProfile = (ImageView)findViewById(R.id.register_Image);
-    }
-
-    private void sendEmailVerification() {
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-        if (firebaseUser != null) {
-            firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
-                        sendUserData();
-                        Toast.makeText(RegistrationActivity.this, "Successfully Registered, verification mail has been send",Toast.LENGTH_SHORT).show();
-                        firebaseAuth.signOut();
-                        finish();
-                        startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
-                    }
-                    else {
-                        Toast.makeText(RegistrationActivity.this,"Verification hasn't Been sent",Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }
     }
 
     private void sendUserData() {
