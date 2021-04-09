@@ -131,17 +131,19 @@ public class SecondActivity extends AppCompatActivity implements UserDataAdapter
         return true;
     }
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
+        final int logoutMenu = R.id.logoutMenu;
+        final int profileMenu = R.id.profileMenu;
+
         switch (item.getItemId()) {
 
-            case R.id.logoutMenu: {
+            case logoutMenu: {
                 logout();
                 break;
             }
-            case R.id.profileMenu: {
+            case profileMenu: {
                 startActivity(new Intent(SecondActivity.this, ProfileActivity.class));
                 break;
             }

@@ -19,7 +19,7 @@ import static com.example.logindemo.SecondActivity.EXTRA_NAME;
 
 public class DetailActivity extends AppCompatActivity {
 
-    @SuppressLint("SetTextI18n")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +39,15 @@ public class DetailActivity extends AppCompatActivity {
         TextView gender = findViewById(R.id.userGender);
         TextView description = findViewById(R.id.userDescription);
 
-        name.setText("Name : " + Name);
-        age.setText("Age : " + Age);
-        country.setText("Country : " + Country);
-        gender.setText("Gender : " + Gender);
+        String nameOfUser = "Name : " + Name;
+        String ageOfUser = "Age : " + Age;
+        String countryOfUser = "Country : " + Country;
+        String genderOfUser = "Gender : " + Gender;
+
+        name.setText(nameOfUser);
+        age.setText(ageOfUser);
+        country.setText(countryOfUser);
+        gender.setText(genderOfUser);
         description.setText(Description);
     }
 }

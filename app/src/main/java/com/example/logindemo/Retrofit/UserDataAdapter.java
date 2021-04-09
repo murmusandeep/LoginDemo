@@ -43,7 +43,6 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.UserDa
         return new UserDataViewHolder(view);
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull UserDataViewHolder holder, int position) {
 
@@ -55,10 +54,14 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.UserDa
         String userAge = userdata.getAge();
         String userDescription = userdata.getDescription();
 
-        holder.mNameView.setText("Name : " + userName);
-        holder.mGenderView.setText("Gender : " + userGender);
-        holder.mCountryView.setText("Country : " + userCountry);
-        holder.mAgeView.setText("Age : " + userAge);
+        String name = "Name : " + userName;
+        String gender = "Gender : " + userGender;
+        String country = "Country : " + userCountry;
+        String age = "Age : " + userAge;
+        holder.mNameView.setText(name);
+        holder.mGenderView.setText(gender);
+        holder.mCountryView.setText(country);
+        holder.mAgeView.setText(age);
     }
 
     @Override

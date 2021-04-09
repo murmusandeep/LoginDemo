@@ -2392,6 +2392,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string country
+string create_an_account
 string default_web_client_id
 string description
 string email
@@ -2400,6 +2401,7 @@ string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string firebase_database_url
+string forgot_password
 string gcm_defaultSenderId
 string gender
 string google_api_key
@@ -2409,6 +2411,7 @@ string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string login
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -2461,6 +2464,7 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string name
 string no_of_attempts_remaining
+string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2468,6 +2472,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
 string search_menu_title
+string solve_foundation
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

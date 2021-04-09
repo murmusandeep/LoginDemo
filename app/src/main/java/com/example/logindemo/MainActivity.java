@@ -19,6 +19,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText mEmail;
@@ -34,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
 
 
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         TextView mUserRegistration = (TextView) findViewById(R.id.registerText);
         TextView mForgotPassword = (TextView) findViewById(R.id.forgotPassword);
 
-        mInfo.setText("No. of Attempts remaining:" + String.valueOf(mCounter));
+        String noOfAttempt = "No. of Attempts remaining:" + String.valueOf(mCounter);
+        mInfo.setText(noOfAttempt);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -66,15 +69,13 @@ public class MainActivity extends AppCompatActivity {
 
                 String email = mEmail.getText().toString();
                 String password = mPassword.getText().toString();
+                if(validateCredentials(email, password)) {
+                    logIn(email, password);
+                }
 
-                if (email.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Enter Email and Password",Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    validate(email, password);
-                }
             }
         });
+
 
         mUserRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void validate(String userEmail, String userPassword) {
+    private void logIn(String userEmail, String userPassword) {
 
         progressDialog.setMessage("Please Wait");
         progressDialog.show();
@@ -121,6 +122,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private boolean emailValidate(String email) {
+
+        Matcher matcher = Pattern.compile("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$").matcher(email);
+
+        return matcher.find();
+    }
+
     private void checkEmailVerification() {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         Boolean emailFlag = firebaseUser.isEmailVerified();
@@ -136,5 +144,38 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Verify your email", Toast.LENGTH_SHORT).show();
             firebaseAuth.signOut();
         } */
+    }
+
+    private boolean isValidEmail(String email) {
+        //String pattern = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
+        if(email.isEmpty()) {
+            return false;
+        }
+        String pattern = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+                + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
+        Matcher matcher = Pattern.compile(pattern).matcher(email);
+        return matcher.find();
+    }
+
+    private boolean isValidPassword(String password) {
+        if (password.isEmpty()) {
+            return false;
+        }
+        if(password.length() < 2 && password.length() > 32) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateCredentials(String email, String password) {
+        if(!isValidEmail(email)) {
+            Toast.makeText(MainActivity.this, "Enter valid email", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(!isValidPassword(password)) {
+            Toast.makeText(MainActivity.this, "Password cannot be empty and length should be between 2 and 32", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 }
