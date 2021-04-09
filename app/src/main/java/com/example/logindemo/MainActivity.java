@@ -122,12 +122,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private boolean emailValidate(String email) {
-
-        Matcher matcher = Pattern.compile("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$").matcher(email);
-
-        return matcher.find();
-    }
 
     private void checkEmailVerification() {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();

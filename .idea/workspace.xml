@@ -5,6 +5,10 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
@@ -339,22 +343,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617878750127" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1617886509163">
+    <state width="1323" height="256" key="GridCell.Tab.0.bottom" timestamp="1617952146369">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617886509163" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1617886509163">
+    <state width="1323" height="256" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617952146369" />
+    <state width="1323" height="256" key="GridCell.Tab.0.center" timestamp="1617952146368">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617886509163" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1617886509162">
+    <state width="1323" height="256" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617952146368" />
+    <state width="1323" height="256" key="GridCell.Tab.0.left" timestamp="1617952146368">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617886509162" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1617886509163">
+    <state width="1323" height="256" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617952146368" />
+    <state width="1323" height="256" key="GridCell.Tab.0.right" timestamp="1617952146368">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617886509163" />
+    <state width="1323" height="256" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617952146368" />
     <state x="453" y="77" key="git4idea.branch.GitSmartOperationDialog" timestamp="1617878982056">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
